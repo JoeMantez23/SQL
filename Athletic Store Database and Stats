@@ -1,0 +1,33 @@
+--Create a grocery store database
+
+
+CREATE TABLE jmantez_store ( ID INTEGER PRIMARY KEY, name TEXT, year integer, price integer, description TEXT);
+
+INSERT INTO jmantez_store VALUES ( 1, 'workout shorts', 1999, 50, 'five inch seam');
+INSERT INTO jmantez_store VALUES (2, 'Joggers', 2000, 85, 'super skinny fit');
+INSERT INTO jmantez_store VALUES (3, 'sweats', 2000, 40, 'loose fit');
+INSERT INTO jmantez_store VALUES (4, 'jacket', 2001, 50, 'waterproof');
+INSERT INTO jmantez_store VALUES (5, 'shoes', 2019, 110, 'runner shoes');
+INSERT INTO jmantez_store VALUES (6, 'running shoes', 2019, 75, 'aesthetic');
+INSERT INTO jmantez_store VALUES (7, 'bag', 2020, 55, 'gym bag');
+INSERT INTO jmantez_store VALUES ( 8, 'hat', 2021, 35, 'workout hat');
+INSERT INTO jmantez_store VALUES (9, 'wrist straps', 2022, 25, 'workout straps');
+INSERT INTO jmantez_store VALUES (10, 'weight belt', 2023, 45, 'belt for lower back');
+INSERT INTO jmantez_store VALUES (11, 'earphones', 2023, 100, 'beat wireless headphones');
+INSERT INTO jmantez_store VALUES (12, 'preworkout', 2021, 55, 'Energy drink to consume 45min before workout');
+INSERT INTO jmantez_store VALUES (13, 'jumprope', 2020, 65, 'Crossfit skinny low-weight jump rope');
+INSERT INTO jmantez_store VALUES (14, 'shake', 2021, 8, 'post-workout shake');
+INSERT INTO jmantez_store VALUES (15, 'chalk', 2020, 15, 'chalk for hands to grip wieght');
+
+
+--Display the database ordered by price (descending)
+
+SELECT * FROM jmantez_store
+ORDER BY year desc;
+
+
+-- What are the top least expensive items from the Database?
+
+SELECT name, price FROM jmantez_store
+ORDER by price asc
+limit 5;
